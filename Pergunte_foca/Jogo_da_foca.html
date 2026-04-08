@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunte à foca</title>
+</head>
+<body>
+    <h1>Pergunte à foca</h1>
+    <img height="380px" src="foca.jpg" alt="foca">
+    <p></p>
+    <div>
+    <input type="text" class="input1"> ou <input type="text" class="input2">
+    </div>
+    <p></p>
+    <button type="button" onclick="escolha()"> Perguntar </button>
+
+</body>
+</html>
+
+<style>
+    img {
+        text-align: center;
+    }
+    body {
+        background-color: lightblue;
+        text-align : center;
+    }
+    button {
+        background-color: blue;
+        text-align : center;
+    }
+    
+</style>
+
+<script>
+    function escolha(){
+        var escolha = Math.floor(Math.random() * 10);
+        if (escolha%2)
+            alert("A foca escolheu "+document.querySelector(".input1").value)
+        else
+            alert("A foca escolheu "+document.querySelector(".input2").value)
+    }
+</script>
